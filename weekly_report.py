@@ -48,7 +48,7 @@ def build_summary(rows):
     change = last_price - first_price
     change_pct = (change / first_price) * 100
 
-    direction = "up" ⁣if change >= 0 else "down"
+    direction = "up" if change >= 0 else "down"
     return (
         f"{SYMBOL} went {direction} {abs(change_pct):.2f}% this period.\n"
         f"From ${first_price:.2f} ({rows[0]['date']}) to ${last_price:.2f} ({rows[-1]['date']})."
